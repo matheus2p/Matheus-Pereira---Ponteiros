@@ -1,0 +1,1 @@
+1. O uso de ponteiros é de fundamental importância, uma vez que com ele é possível a atualização de valores que são utilizados ao longo do software e que, por ventura necessitem de atualização, bastando apenas referenciá-los com uma função e atualizá-los automaticamente, criando um algoritmo otimizado possibilitando a otimização de projetos. 
