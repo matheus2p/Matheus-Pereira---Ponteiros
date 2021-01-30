@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main(){
+int i=5, *p;
+p = &i;
+printf("%x %d %d %d %d", p,*p+2,**&p,3**p,**&p+4); // o p representa o endereço de i, em forma hexadecimal.
+// *p+2 representa, de forma inteira o valor do conteúdo do endereço armazenado em p (i = 5) acrescido de 2 unidades, isto é, igual a 7.
+// **&p separado em duas formas para facilitar o entendimento: *&p é o endereço que p aponta e com o segundo asterisco **&p terá o conteúdo do endereço armazenado em p, ou seja, igual a 5.
+// 3**p teremos o valor que *p que guarda o conteúdo do endereço armazenado em p (i = 5) e esse conteúdo é multiplicado por 3, resultando em 15.
+// Semelhante ao item 3, temos **&p representando o conteúdo do endereço armazenado no ponteiro, que é igual a 5 acrescido de 4 unidades, ou seja, 9.
+
+return 0;
+
+}
