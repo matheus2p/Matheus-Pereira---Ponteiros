@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+float aloha[10], coisas[10][5], *pf, value = 2.2;
+int i=3;
+
+aloha[2] = value; // Válido
+scanf("%f", &aloha); // Válido
+aloha = "value"; // É inválida. Temos uma variável do tipo float recebendo uma expressão de outro tipo, no caso, uma string. E caso, não estivesse entre aspas, também não seria válido, pois no vetor aloha não foi especificado nenhuma posição
+printf("%f", aloha); // Válido
+coisas[4][4] = aloha[3]; // Válido
+coisas[5] = aloha; // É inválida. Temos aqui que, quando se especifica uma posição de um vetor, ela se atua como se fosse uma variável comum, sendo assim, é inválido atribuir a uma variável simples a igualdade entre um vetor
+pf = value; // É inválida. Temos aqui uma incompatibilidade de tipos em que, é incorreto atribuir que um float* seja igual a um float, uma vez que são tipos diferentes de variável
+pf = aloha; // Válido
+
+return 0;
+}
