@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+int i = 3, j= 4, *p, *q;
+
+p = &i;
+*q = &j;
+p = &*&i;
+i = (*&)j; // ilegal
+i = *&j;
+i = &&j; // ilegal
+q = *p;
+i = (*p)` + *q; // ilegal
+
+// Na lista, essas são, respectivamente, as letras d, f, h.
+
+return 0;
+}
