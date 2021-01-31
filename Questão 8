@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+int mat[4], *p, x;
+
+p = mat + 1; // Não há problema, apenas imprime o endereço do vetor mat acrescido de 4 bytes (devido a variável ser do tipo int) em que o ponteiro p está apontando
+p = mat; // Não há problema, apenas imprime o endereço do vetor mat em que o ponteiro p está apontando
+p = mat; // Não há problema, apenas imprime o endereço do vetor mat em que o ponteiro p está apontando
+x = (*mat); // Não há problema, temos a impressão de x, em que, temos a atribuição de que o valor contido no endereço de memória de mat é apontado por x.
+
+return 0;
+
+}
