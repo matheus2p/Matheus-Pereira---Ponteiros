@@ -1,17 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(){
 int i=3,j=5;
 int *p, *q;
 p = &i;
 q = &j;
 
-printf("%d", p == &i); // Será impresso o resultado de 1.
-printf("%d",*p - *q); //  Será impresso o resultado de -2.
-printf("%d", **&p); //  Será impresso o resultado de 3.
-printf("%d", 3 - *p/(*q) + 7); // Será impresso o resultado de 10.
+p == &i // Espera-se que seja impresso o valor 1, uma vez que eu estou comparando se o p é igual ao &i, e como é verdade, tem o 1 como retorno
 
-return 0;
+*p - *q //  Espera-se que seja impresso o valor -2, uma vez que se está subtraindo o conteúdo de endereço armazenado em &i (3) e em &j (5).
 
-}
+**&p //  Espera-se que seja impresso o valor 3, uma vez que &p é o endereço da variável que p aponta e, *&p recupera o conteúdo armazenado nessa variável. Assim, teria **&p = *&i = 3
+
+3 - *p/(*q) + 7 // Espera-se que seja impresso o valoe 10, isso acontece porque quando temos as variáveis tanto *p quanto *q declaradas como tipo inteiro, e a divisão
+// entre 3/5 resulta num número decimal, o programa tomará isso como 0 (devido a variável ser do tipo int). Logo, teremos apenas o 3+7.
+
