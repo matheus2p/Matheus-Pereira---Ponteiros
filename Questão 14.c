@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int compara(const void *a, const void *b){ // temos a função compara que tem como parâmetro dois const voids (basicamente usado para receber a variável do tipo selecionado anteriormente)
-// então, será comparado dois valores com o objetivo de ordená-los em ordem crescente e será retornado um inteiro
-  float calculo = *(float*)a - *(float*)b; // declaração da função calculo que recebe os valores e os subtrai
-  if(calculo > 0){ // temos aqui que, caso a subtração resulte num número positivo, terá retorno de um VERDADEIRO, ou seja, o valor em a > b
+int compara(const void *a, const void *b){ // temos a funÃ§Ã£o compara que tem como parÃ¢metro dois const voids (basicamente usado para receber a variÃ¡vel do tipo selecionado anteriormente)
+// entÃ£o, serÃ¡ comparado dois valores com o objetivo de ordenÃ¡-los em ordem crescente e serÃ¡ retornado um inteiro
+  float calculo = *(float*)a - *(float*)b; // declaraÃ§Ã£o da funÃ§Ã£o calculo que recebe os valores e os subtrai
+  if(calculo > 0){ // temos aqui que, caso a subtraÃ§Ã£o resulte num nÃºmero positivo, terÃ¡ retorno de um VERDADEIRO, ou seja, o valor em a > b
     return 1;
-  } if (calculo < 0){ // temos aqui que, caso a subtração resulte num número negativo, terá retorno de um FALSO, ou seja, o valor em a < b
+  } if (calculo < 0){ // temos aqui que, caso a subtraÃ§Ã£o resulte num nÃºmero negativo, terÃ¡ retorno de um FALSO, ou seja, o valor em a < b
    return -1;
-  } if (calculo == 0){ // temos aqui que, caso a subtração resulte num número é porque a = b
+  } if (calculo == 0){ // temos aqui que, caso a subtraÃ§Ã£o resulte num nÃºmero Ã© porque a = b
     return 0;
   }
 }
@@ -17,19 +17,21 @@ float *p ,n;
 printf("INFORME A QUANTIDADE DE NUMEROS QUE SERAO ORDENADOS: ");
 scanf("%f", &n);
 
-p = malloc(n*sizeof(float)); // alocação dinâmica para reservar um espaço para o p
+p = malloc(n*sizeof(float)); // alocaÃ§Ã£o dinÃ¢mica para reservar um espaÃ§o para o p
 
+printf("INFORME OS NUMEROS A SEREM ORDENADOS: ");
 for(int i = 0; i < n; i++){
-   scanf("%f", (p+i));   // inserindo os elementos que serão ordenados (preferência de ordem decrescente para observar a ordenação)
+   scanf("%f", (p+i));   // inserindo os elementos que serÃ£o ordenados (preferÃªncia de ordem decrescente para observar a ordenaÃ§Ã£o)
 }
 
-qsort(p, n, sizeof(float), compara); // chamada da função qsort que tem como parâmetro o ponteiro p, a função de ordenação, a quantidade de número e o tamanho do tipo escolhido
+qsort(p, n, sizeof(float), compara); // chamada da funÃ§Ã£o qsort que tem como parÃ¢metro o ponteiro p, a funÃ§Ã£o de ordenaÃ§Ã£o, a quantidade de nÃºmero e o tamanho do tipo escolhido
 
 printf("OS VALORES ORDENADOS SAO: \n");
 for(int i = 0; i < n; i++){
-   printf("%f\n", p[i]); // imprime os valores ordenados pela função ordena
+   printf("%f\n", p[i]); // imprime os valores ordenados pela funÃ§Ã£o ordena
 }
-free(p); // libera o espaço ocupado pelo vetor
+  
+free(p); // libera o espaÃ§o ocupado pelo vetor
 
     return 0;
 }
