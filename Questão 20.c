@@ -29,6 +29,8 @@ printf ("FORAM NECESSARIOS %f SEGUNDOS PARA CARREGAR A FUNCAO DE ALOCACAO/LIBERA
     return 0;
 }
 
+// Resultado da compilação
+
 ubuntu@ubuntu-VirtualBox:~/Área de Trabalho/Código$ gcc teste1.c -o teste1 -lgc
 ubuntu@ubuntu-VirtualBox:~/Área de Trabalho/Código$ ./teste1
 FORAM NECESSARIOS 0.573208 SEGUNDOS PARA CARREGAR A FUNCAO DA BIBLIOTECA 
