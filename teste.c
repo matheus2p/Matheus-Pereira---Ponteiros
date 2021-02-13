@@ -21,3 +21,7 @@ int main(void)
 
     return 0;
 }
+
+ubuntu@ubuntu-VirtualBox:~/Área de Trabalho/Código$ gcc teste.c -o teste -lgc
+ubuntu@ubuntu-VirtualBox:~/Área de Trabalho/Código$ ./teste
+Heap size = 131072
